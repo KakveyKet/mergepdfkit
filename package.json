@@ -1,0 +1,27 @@
+{
+  "name": "pdfeasy-merge-tool",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev --host 0.0.0.0",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "generate": "nuxt generate && node scripts/write-seo.mjs",
+    "postinstall": "nuxt prepare",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "nuxt": "^4.0.0",
+    "vue": "^3.5.0",
+    "vue-router": "^4.5.0",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

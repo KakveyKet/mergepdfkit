@@ -1,0 +1,20 @@
+# Copy the server block into your own Nginx configuration.
+# First deploy the contents of .output/public/ to /var/www/pdfeasy/.
+# Add your real hostname and HTTPS certificate with your server's usual process.
+server {
+    listen 80;
+    server_name your-real-domain.com;
+    root /var/www/pdfeasy;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+    location /_nuxt/ {
+        expires 30d;
+        add_header Cache-Control "public, immutable";
+        try_files $uri =404;
+    }
+    add_header X-Content-Type-Options nosniff always;
+    add_header Referrer-Policy strict-origin-when-cross-origin always;
+}

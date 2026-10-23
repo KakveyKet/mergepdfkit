@@ -1,0 +1,31 @@
+<script setup>
+usePageSeo({ title:'Privacy Policy | PDFEasy', description:'Read how PDFEasy processes PDF files in your browser and what data website hosting or future advertising may collect.', path:'/privacy-policy' })
+const config = useRuntimeConfig()
+const email = computed(() => String(config.public.contactEmail || 'kakveyket408@gmail.com').trim())
+</script>
+<template>
+  <main class="site-container max-w-[800px]! pt-14 sm:pt-20 prose-custom">
+    <p class="text-brand! font-extrabold text-sm uppercase tracking-[.18em]">Privacy information</p>
+    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Privacy Policy</h1>
+    <p><strong>Last updated:</strong> October 23, 2026</p>
+    <p>This policy describes how this version of PDFEasy handles information. The website operator should review it against actual hosting, advertising, analytics, and legal requirements before publishing.</p>
+    <h2>PDF file processing</h2>
+    <p>PDF documents selected in the Merge PDF tool are opened and combined locally in your browser with the pdf-lib JavaScript library. The merge feature does not upload those PDF documents to an application server. The result is downloaded directly to your device. The tool does not intentionally store document content in browser storage.</p>
+    <h2>Website requests and technical data</h2>
+    <p>Your browser requests website pages and scripts from the website host. Like many hosting systems, web servers and infrastructure providers may maintain access logs containing IP addresses, request times, user-agent information, and requested URLs for security and reliability. The actual retention period depends on the hosting configuration selected by the website owner.</p>
+    <h2>Cookies, analytics and advertisements</h2>
+    <p>The project does not load analytics or advertising scripts by default. If the operator configures a Google AdSense publisher ID, a meta tag can be added to verify site ownership without showing ads. Advertising is activated only through a separate, explicit production setting.</p>
+    <p>If Google advertising is enabled, Google and other third-party vendors may use cookies or similar identifiers to display and measure advertisements. Google's advertising cookies can support ads based on your visits to this site or other sites. You can manage Google ad personalization at <a href="https://myadcenter.google.com/" rel="noopener noreferrer" target="_blank">My Ad Center</a>; some third-party vendors also provide opt-out methods. The operator must disclose all active advertising and analytics vendors and implement any legally required consent choices before switching advertisements on.</p>
+    <p>Privacy laws and requirements vary by region. This project does not ship with a consent-management platform; the operator must configure one where required before allowing advertising scripts to run.</p>
+    <h2>Fonts</h2>
+    <p>This design requests the Inter font stylesheet and font files from Google Fonts when pages load. As with other third-party web resources, your browser connects to Google to retrieve these assets. This does not upload PDF document contents.</p>
+    <h2>Website logo</h2>
+    <p>The PDFEasy logo is delivered from Cloudinary, an image-hosting service. When your browser requests the logo, it connects to Cloudinary and may transmit standard request information, such as your IP address. This does not send the PDFs you are merging to Cloudinary.</p>
+    <h2>Third-party services</h2>
+    <p>The public website may be served by a hosting company. The build relies on open-source code; it does not make API requests to an external PDF conversion service when you merge a document. If the website operator later adds other services, they should be disclosed here.</p>
+    <h2>Security and limitations</h2>
+    <p>Browser-local processing reduces the need to transfer documents to an external conversion server, but no web service or device can guarantee absolute security. Use trusted devices and modern browsers. Avoid processing documents that your employer or another organization does not permit you to handle in a web application.</p>
+    <h2>Questions</h2>
+    <p>For privacy questions, contact <a :href="`mailto:${email}`">{{ email }}</a>.</p>
+  </main>
+</template>

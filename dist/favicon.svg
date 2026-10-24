@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PDFEasy logo">
+  <rect x="8" y="13" width="36" height="43" rx="8" fill="#dbeafe"/>
+  <rect x="13" y="9" width="37" height="46" rx="8" fill="#93b4ff"/>
+  <path d="M23 4h20l12 12v36a8 8 0 0 1-8 8H23a8 8 0 0 1-8-8V12a8 8 0 0 1 8-8Z" fill="#2563eb"/>
+  <path d="M43 4v12h12" fill="#93c5fd"/>
+  <path d="M25 27c7 0 8 10 15 10m-15 10c7 0 8-10 15-10m-5-5 5 5-5 5" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

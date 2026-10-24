@@ -7,10 +7,10 @@ const email = computed(() => String(config.public.contactEmail || 'kakveyket408@
   <main class="site-container max-w-[800px]! pt-14 sm:pt-20 prose-custom">
     <p class="text-brand! font-extrabold text-sm uppercase tracking-[.18em]">Privacy information</p>
     <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Privacy Policy</h1>
-    <p><strong>Last updated:</strong> October 23, 2026</p>
+    <p><strong>Last updated:</strong> October 24, 2026</p>
     <p>This policy describes how this version of PDFEasy handles information. The website operator should review it against actual hosting, advertising, analytics, and legal requirements before publishing.</p>
     <h2>PDF file processing</h2>
-    <p>PDF documents selected in the Merge PDF tool are opened and combined locally in your browser with the pdf-lib JavaScript library. The merge feature does not upload those PDF documents to an application server. The result is downloaded directly to your device. The tool does not intentionally store document content in browser storage.</p>
+    <p>PDF files selected in Merge PDF, Split PDF, Rotate PDF, and Organize PDF are processed locally in your browser using the pdf-lib JavaScript library. JPG and PNG pictures selected in JPG to PDF are also processed locally. These tools do not intentionally upload your chosen PDFs or pictures to a PDF conversion server, and they do not intentionally store document contents in browser storage. Downloads are generated from in-memory data and temporary browser object URLs that are released when you remove files or leave the page.</p>
     <h2>Website requests and technical data</h2>
     <p>Your browser requests website pages and scripts from the website host. Like many hosting systems, web servers and infrastructure providers may maintain access logs containing IP addresses, request times, user-agent information, and requested URLs for security and reliability. The actual retention period depends on the hosting configuration selected by the website owner.</p>
     <h2>Cookies, analytics and advertisements</h2>
@@ -20,9 +20,9 @@ const email = computed(() => String(config.public.contactEmail || 'kakveyket408@
     <h2>Fonts</h2>
     <p>This design requests the Inter font stylesheet and font files from Google Fonts when pages load. As with other third-party web resources, your browser connects to Google to retrieve these assets. This does not upload PDF document contents.</p>
     <h2>Website logo</h2>
-    <p>The PDFEasy logo is delivered from Cloudinary, an image-hosting service. When your browser requests the logo, it connects to Cloudinary and may transmit standard request information, such as your IP address. This does not send the PDFs you are merging to Cloudinary.</p>
+    <p>The PDFEasy logo is delivered from Cloudinary, an image-hosting service. When your browser requests the logo, it connects to Cloudinary and may transmit standard request information, such as your IP address. This does not send your chosen PDF files or photographs to Cloudinary.</p>
     <h2>Third-party services</h2>
-    <p>The public website may be served by a hosting company. The build relies on open-source code; it does not make API requests to an external PDF conversion service when you merge a document. If the website operator later adds other services, they should be disclosed here.</p>
+    <p>The public website may be served by a hosting company. The build relies on open-source code; it does not make API requests to an external PDF conversion service when you use the included PDF tools. If the website operator later adds other services, they should be disclosed here.</p>
     <h2>Security and limitations</h2>
     <p>Browser-local processing reduces the need to transfer documents to an external conversion server, but no web service or device can guarantee absolute security. Use trusted devices and modern browsers. Avoid processing documents that your employer or another organization does not permit you to handle in a web application.</p>
     <h2>Questions</h2>

@@ -1,0 +1,7 @@
+export const pdfTools = [
+  { name: 'Merge PDF', desc: 'Combine multiple PDF files into one document.', to: '/merge-pdf', icon: '⇄', tag: 'Popular' },
+  { name: 'Split PDF', desc: 'Extract the pages you need or split a file in two.', to: '/split-pdf', icon: '✂', tag: 'New' },
+  { name: 'JPG to PDF', desc: 'Create a PDF from your JPG or PNG images.', to: '/jpg-to-pdf', icon: '▧', tag: 'New' },
+  { name: 'Rotate PDF', desc: 'Turn individual pages or a whole PDF.', to: '/rotate-pdf', icon: '↻', tag: 'New' },
+  { name: 'Organize PDF', desc: 'Reorder, rotate and remove document pages.', to: '/organize-pdf', icon: '▤', tag: 'New' }
+]

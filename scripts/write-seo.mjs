@@ -4,7 +4,7 @@ import { join } from 'node:path'
 const output = join(process.cwd(), '.output', 'public')
 await mkdir(output, { recursive: true })
 const routes = [
-  '/', '/merge-pdf', '/guides', '/about', '/contact', '/privacy-policy', '/terms',
+  '/', '/tools', '/merge-pdf', '/split-pdf', '/jpg-to-pdf', '/rotate-pdf', '/organize-pdf', '/guides', '/about', '/contact', '/privacy-policy', '/terms',
   '/guides/how-to-merge-pdf', '/guides/is-online-pdf-merging-safe',
   '/guides/organize-pdf-files', '/guides/fix-pdf-merge-problems', '/guides/choose-pdf-order'
 ]

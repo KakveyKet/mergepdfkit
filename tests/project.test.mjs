@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 const root = process.cwd()
 const pages = [
-  'index', 'merge-pdf', 'guides/index', 'about', 'contact', 'privacy-policy', 'terms',
+  'index', 'tools', 'merge-pdf', 'split-pdf', 'jpg-to-pdf', 'rotate-pdf', 'organize-pdf', 'guides/index', 'about', 'contact', 'privacy-policy', 'terms',
   'guides/how-to-merge-pdf', 'guides/is-online-pdf-merging-safe',
   'guides/organize-pdf-files', 'guides/fix-pdf-merge-problems', 'guides/choose-pdf-order'
 ]

@@ -79,3 +79,8 @@ button:disabled { cursor: not-allowed; }
 .file-icon-btn:hover:not(:disabled) { background:#eff6ff;color:#1d4ed8; }
 .file-icon-btn:disabled { opacity:.25; }
 .step-number { display:inline-grid;place-items:center;width:23px;height:23px;margin-right:5px;border-radius:50%;background:#dbeafe;color:#1d4ed8;font-size:.74rem;font-weight:800; }
+
+/* Consistent accessible input styling used by all additional tools. */
+.tool-input { display:block; width:100%; min-width:0; border:1px solid #cbd5e1; border-radius:11px; padding:.77rem .85rem; color:#0f172a; background:#fff; font-size:.9rem; outline-offset:2px; }
+.tool-input:focus-visible { border-color:#2563eb; outline:3px solid #bfdbfe; }
+.tool-input:disabled { opacity:.6; cursor:not-allowed; background:#f8fafc; }

@@ -1,18 +1,18 @@
 <script setup>
-usePageSeo({ title:'Terms of Use | PDFEasy', description:'Read usage terms and technical limitations for the free PDFEasy PDF merging tool.', path:'/terms' })
+usePageSeo({ title:'Terms of Use | PDFEasy', description:'Read usage terms and technical limitations for the free PDFEasy PDF tools.', path:'/terms' })
 </script>
 <template>
   <main class="site-container max-w-[800px]! pt-14 sm:pt-20 prose-custom">
     <p class="text-brand! font-extrabold text-sm uppercase tracking-[.18em]">Website information</p>
     <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Terms of Use</h1>
-    <p><strong>Last updated:</strong> October 23, 2026</p>
-    <p>PDFEasy offers a free browser-based tool for combining supported PDF files. By using the tool, you agree to use it responsibly and only with documents you have a right to process.</p>
+    <p><strong>Last updated:</strong> October 24, 2026</p>
+    <p>PDFEasy offers free browser-based PDF merging, splitting, page rotation, organization, and JPG/PNG image-to-PDF conversion. By using the tool, you agree to use it responsibly and only with documents you have a right to process.</p>
     <h2>Permitted use</h2>
     <p>Use the website for lawful personal, educational, or business document organization. Do not attempt to damage the service, exploit security weaknesses, or interfere with other users.</p>
     <h2>PDF compatibility</h2>
-    <p>The tool currently accepts up to 20 standard PDFs, with a 30 MB limit per file and a 100 MB combined limit. It does not support encrypted PDF input. It may not retain all interactive features, forms, digital signatures, or document metadata from the source files.</p>
+    <p>Merge PDF accepts up to 20 PDFs, 30 MB each and 100 MB total. Split, Rotate, and Organize accept one PDF of up to 50 MB; Organize supports up to 150 pages. JPG to PDF accepts up to 30 JPG/PNG images, 20 MB each and 120 MB in total. PDF files must be unlocked and supported. Editing or copying PDF pages may invalidate digital signatures or change forms, annotations, and metadata.</p>
     <h2>Check your output</h2>
-    <p>You are responsible for reviewing the merged file for completeness, order, formatting, and suitability before relying on it. For contracts or records requiring valid digital signatures, use a workflow appropriate to those documents.</p>
+    <p>You are responsible for reviewing the resulting PDF for completeness, order, formatting, and suitability before relying on it. For contracts or records requiring valid digital signatures, use a workflow appropriate to those documents.</p>
     <h2>Service availability</h2>
     <p>The site is provided on an as-available basis. Browser behavior, device memory, and file complexity can affect performance. Features may change as this project evolves.</p>
     <h2>Contact</h2>

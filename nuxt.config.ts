@@ -14,10 +14,11 @@ export default defineNuxtConfig({
   vite: { plugins: [tailwindcss()] },
   runtimeConfig: {
     public: {
-      siteUrl: '',
+      siteUrl: "https://usepdfeasy.com",
       contactEmail: '',
       adsenseClientId: '',
-      enableLiveAds: false
+      enableLiveAds: false,
+
     }
   },
   nitro: {

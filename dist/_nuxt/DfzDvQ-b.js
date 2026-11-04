@@ -1,1 +1,0 @@
-import{a as e,i as t,o as n}from"#entry";function r({title:r,description:i,path:a}){let o=n(),s=String(o.public.siteUrl||``).replace(/\/+$/,``),c=s&&/^https?:\/\//.test(s)?`${s}${a}`:null;e({title:r,description:i,ogTitle:r,ogDescription:i,ogType:`website`,twitterCard:`summary`,...c?{ogUrl:c}:{}}),c&&t({link:[{rel:`canonical`,href:c}]})}export{r as t};

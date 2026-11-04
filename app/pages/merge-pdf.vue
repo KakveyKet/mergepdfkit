@@ -1,10 +1,11 @@
 <script setup>
 usePageSeo({
-  title: "Merge PDF Online Free | PDFEasy",
+  title: "JPG to PDF Converter Online Free | PDFEasy",
   description:
-    "Combine multiple PDF files into one document for free. " +
-    "Merge PDFs privately in your browser without uploading files.",
-  path: "/merge-pdf",
+    "Convert JPG or PNG images to PDF for free. " +
+    "Combine multiple pictures into one document, " +
+    "arrange their order and download your PDF.",
+  path: "/jpg-to-pdf",
 });
 
 const questions = [

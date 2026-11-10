@@ -1,6 +1,4 @@
 <script setup>
-import { pdfTools } from "~/utils/toolCatalog.mjs";
-
 usePageSeo({
   title: "PDFEasy — Free Online PDF Tools, Simple & Private",
   description:
@@ -9,21 +7,65 @@ usePageSeo({
   path: "/",
 });
 
+// Homepage tool cards.
+// Defined here to ensure all five tools always render.
+const homepageTools = [
+  {
+    title: "Merge PDF",
+    description: "Combine multiple PDF files into one document.",
+    to: "/merge-pdf",
+    icon: "merge",
+    badge: "Popular",
+  },
+  {
+    title: "Split PDF",
+    description: "Extract the pages you need or split a file in two.",
+    to: "/split-pdf",
+    icon: "split",
+    badge: "Free",
+  },
+  {
+    title: "JPG to PDF",
+    description: "Create a PDF from your JPG or PNG images.",
+    to: "/jpg-to-pdf",
+    icon: "image",
+    badge: "Free",
+  },
+  {
+    title: "Rotate PDF",
+    description: "Turn individual pages or a whole PDF.",
+    to: "/rotate-pdf",
+    icon: "rotate",
+    badge: "Free",
+  },
+  {
+    title: "Organize PDF",
+    description: "Reorder, rotate and remove document pages.",
+    to: "/organize-pdf",
+    icon: "organize",
+    badge: "Free",
+  },
+];
+
 const steps = [
   {
     number: "01",
     title: "Choose a tool",
-    body: "Pick the PDF action you want—merge, split, convert, rotate, or organize.",
+    body:
+      "Pick the PDF action you want—merge, split, " +
+      "convert, rotate, or organize.",
   },
   {
     number: "02",
     title: "Select your files",
-    body: "Choose a document or pictures from your device and adjust the settings.",
+    body:
+      "Choose a document or pictures from your " +
+      "device and adjust the settings.",
   },
   {
     number: "03",
     title: "Download",
-    body: "Create your updated PDF directly in the browser and save it.",
+    body: "Create your updated PDF directly in the " + "browser and save it.",
   },
 ];
 
@@ -31,19 +73,19 @@ const guides = [
   {
     label: "GETTING STARTED",
     title: "How to merge PDF files in order",
-    body: "Clear instructions for combining multiple PDF documents.",
+    body: "Clear instructions for combining multiple " + "PDF documents.",
     to: "/guides/how-to-merge-pdf",
   },
   {
     label: "PRIVACY",
     title: "Is merging PDFs online safe?",
-    body: "Find out what browser-based PDF processing really means.",
+    body: "Find out what browser-based PDF processing " + "really means.",
     to: "/guides/is-online-pdf-merging-safe",
   },
   {
     label: "TROUBLESHOOTING",
     title: "Fix common PDF merging problems",
-    body: "Understand common PDF errors and practical ways to solve them.",
+    body: "Understand common PDF errors and practical " + "ways to solve them.",
     to: "/guides/fix-pdf-merge-problems",
   },
 ];
@@ -51,7 +93,9 @@ const guides = [
 
 <template>
   <main>
+    <!-- ====================================== -->
     <!-- HERO SECTION -->
+    <!-- ====================================== -->
     <section
       class="relative overflow-hidden border-b border-slate-100 bg-[linear-gradient(180deg,#f4f8ff_0%,#fff_100%)]"
     >
@@ -99,7 +143,9 @@ const guides = [
       </div>
     </section>
 
-    <!-- ALL PDF TOOLS -->
+    <!-- ====================================== -->
+    <!-- PDF TOOLS SECTION -->
+    <!-- ====================================== -->
     <section class="site-container pt-16 sm:pt-22" aria-label="All PDF tools">
       <div class="mx-auto max-w-[660px] text-center">
         <p class="eyebrow">Choose what you need</p>
@@ -115,25 +161,129 @@ const guides = [
         </p>
       </div>
 
-      <div class="mt-10 grid gap-6 md:grid-cols-2">
-        <PdfToolCard
-          v-for="tool in pdfTools"
+      <!-- ALL FIVE WORKING TOOLS -->
+      <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <NuxtLink
+          v-for="tool in homepageTools"
           :key="tool.to"
-          :tool="tool"
-          heading="h3"
-        />
-
-        <!-- UPCOMING TOOL -->
-        <div
-          class="flex flex-col justify-center rounded-[24px] border-2 border-dashed border-slate-200 bg-slate-50 p-8 sm:p-10"
+          :to="tool.to"
+          class="group relative flex min-h-[270px] flex-col rounded-[24px] border border-slate-200 bg-white p-7 transition-all duration-200 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
         >
-          <span
-            class="grid h-20 w-20 place-items-center rounded-2xl bg-white text-4xl text-slate-400"
-          >
-            ⇣
-          </span>
+          <div class="flex items-start justify-between gap-3">
+            <!-- TOOL ICON -->
+            <div
+              class="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="29"
+                height="29"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <!-- Merge icon -->
+                <template v-if="tool.icon === 'merge'">
+                  <path d="M4 7h16" />
+                  <path d="m8 3-4 4 4 4" />
+                  <path d="M20 17H4" />
+                  <path d="m16 13 4 4-4 4" />
+                </template>
 
-          <h3 class="mt-5 text-lg font-extrabold text-slate-600">
+                <!-- Split icon -->
+                <template v-else-if="tool.icon === 'split'">
+                  <circle cx="6" cy="6" r="2" />
+                  <circle cx="6" cy="18" r="2" />
+                  <path d="M8 8l12 12" />
+                  <path d="M8 16L20 4" />
+                </template>
+
+                <!-- Image icon -->
+                <template v-else-if="tool.icon === 'image'">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <path d="m21 15-5-5L5 21" />
+                </template>
+
+                <!-- Rotate icon -->
+                <template v-else-if="tool.icon === 'rotate'">
+                  <path d="M3 11a9 9 0 1 1 3 7" />
+                  <path d="M3 4v7h7" />
+                </template>
+
+                <!-- Organize icon -->
+                <template v-else-if="tool.icon === 'organize'">
+                  <rect x="5" y="3" width="14" height="18" rx="2" />
+                  <path d="M9 7h6" />
+                  <path d="M9 11h6" />
+                  <path d="M9 15h6" />
+                </template>
+              </svg>
+            </div>
+
+            <!-- BADGE -->
+            <span
+              class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-500"
+            >
+              {{ tool.badge }}
+            </span>
+          </div>
+
+          <!-- TOOL TITLE -->
+          <h3
+            class="mt-7 text-xl font-extrabold tracking-tight text-slate-950 transition-colors group-hover:text-blue-600"
+          >
+            {{ tool.title }}
+          </h3>
+
+          <!-- TOOL DESCRIPTION -->
+          <p class="mt-3 flex-1 text-sm leading-7 text-slate-600">
+            {{ tool.description }}
+          </p>
+
+          <!-- LINK -->
+          <span
+            class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-blue-600"
+          >
+            Use tool
+            <span class="transition-transform group-hover:translate-x-1">
+              →
+            </span>
+          </span>
+        </NuxtLink>
+
+        <!-- ================================= -->
+        <!-- UPCOMING COMPRESS PDF -->
+        <!-- ================================= -->
+        <div
+          class="flex min-h-[270px] flex-col rounded-[24px] border-2 border-dashed border-slate-200 bg-slate-50 p-7"
+        >
+          <div
+            class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-slate-400"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 3v12" />
+              <path d="m7 10 5 5 5-5" />
+              <path d="M5 20h14" />
+            </svg>
+          </div>
+
+          <h3 class="mt-7 text-xl font-extrabold text-slate-600">
             Compress PDF
 
             <span class="ml-1 text-xs font-semibold text-slate-400">
@@ -141,7 +291,7 @@ const guides = [
             </span>
           </h3>
 
-          <p class="mt-2 text-sm leading-7 text-slate-600">
+          <p class="mt-3 text-sm leading-7 text-slate-600">
             We are checking quality-safe compression methods before releasing
             this tool.
           </p>
@@ -149,7 +299,9 @@ const guides = [
       </div>
     </section>
 
+    <!-- ====================================== -->
     <!-- ADSTERRA NATIVE BANNER -->
+    <!-- ====================================== -->
     <section
       class="site-container mt-12 sm:mt-16"
       aria-label="Sponsored content"
@@ -159,7 +311,9 @@ const guides = [
       </ClientOnly>
     </section>
 
+    <!-- ====================================== -->
     <!-- MERGE PDF WORKSPACE -->
+    <!-- ====================================== -->
     <section class="site-container pt-20 sm:pt-24">
       <div class="mx-auto max-w-[700px] text-center">
         <p class="eyebrow">Popular tool</p>
@@ -181,7 +335,9 @@ const guides = [
       </div>
     </section>
 
+    <!-- ====================================== -->
     <!-- HOW IT WORKS -->
+    <!-- ====================================== -->
     <section class="site-container mt-20 sm:mt-26">
       <div
         class="rounded-[22px] border border-blue-100 bg-[#f8fbff] px-6 py-10 sm:px-10 sm:py-13"
@@ -220,7 +376,9 @@ const guides = [
       </div>
     </section>
 
+    <!-- ====================================== -->
     <!-- PDF GUIDES -->
+    <!-- ====================================== -->
     <section class="site-container mt-20 mb-20 sm:mt-26">
       <div class="flex flex-wrap items-end justify-between gap-4">
         <div>

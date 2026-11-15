@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -7,8 +6,6 @@
   <url>
     <loc>https://usepdfeasy.com/tools</loc>
   </url>
-
-  <!-- PDF TOOLS -->
   <url>
     <loc>https://usepdfeasy.com/merge-pdf</loc>
   </url>
@@ -45,8 +42,6 @@
   <url>
     <loc>https://usepdfeasy.com/crop-pdf</loc>
   </url>
-
-  <!-- GUIDES -->
   <url>
     <loc>https://usepdfeasy.com/guides</loc>
   </url>
@@ -65,8 +60,6 @@
   <url>
     <loc>https://usepdfeasy.com/guides/choose-pdf-order</loc>
   </url>
-
-  <!-- INFORMATION PAGES -->
   <url>
     <loc>https://usepdfeasy.com/about</loc>
   </url>

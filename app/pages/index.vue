@@ -45,6 +45,65 @@ const homepageTools = [
     icon: "organize",
     badge: "Free",
   },
+
+  {
+    title: "Add Page Numbers",
+    description: "Add page numbers to your PDF with custom position and style.",
+    to: "/add-page-numbers",
+    icon: "numbers",
+    badge: "New",
+  },
+
+  {
+    title: "Watermark PDF",
+    description: "Add text or image watermarks to your PDF documents.",
+    to: "/watermark-pdf",
+    icon: "watermark",
+    badge: "New",
+  },
+
+  {
+    title: "PDF to JPG",
+    description: "Convert PDF pages to JPG images and download them easily.",
+    to: "/pdf-to-jpg",
+    icon: "pdf-to-jpg",
+    badge: "New",
+  },
+
+  {
+    title: "PDF to PNG",
+    description:
+      "Convert PDF pages into sharp PNG images and download them easily.",
+    to: "/pdf-to-png",
+    icon: "pdf-to-png",
+    badge: "New",
+  },
+
+  {
+    title: "Sign PDF",
+    description:
+      "Draw or upload your signature and place it on a PDF document.",
+    to: "/sign-pdf",
+    icon: "sign-pdf",
+    badge: "New",
+  },
+
+  {
+    title: "Compress PDF",
+    description: "Reduce PDF file size with free browser-based compression.",
+    to: "/compress-pdf",
+    icon: "compress-pdf",
+    badge: "New",
+  },
+
+  {
+    title: "Crop PDF",
+    description:
+      "Crop PDF pages and trim unwanted margins with a visual editor.",
+    to: "/crop-pdf",
+    icon: "crop-pdf",
+    badge: "New",
+  },
 ];
 
 const steps = [
@@ -222,6 +281,54 @@ const guides = [
                   <path d="M9 11h6" />
                   <path d="M9 15h6" />
                 </template>
+
+                <!-- Page numbers icon -->
+                <template v-else-if="tool.icon === 'numbers'">
+                  <path d="M5 5h2v10" />
+                  <path d="M4 15h5" />
+                  <path d="M13 7c2-2 5-1 5 1 0 2-5 4-5 7h6" />
+                </template>
+
+                <!-- Watermark PDF icon -->
+                <template v-else-if="tool.icon === 'watermark'">
+                  <path d="M9 10V6a3 3 0 0 1 6 0v4" />
+                  <path d="M7 14h10a2 2 0 0 1 2 2v1H5v-1a2 2 0 0 1 2-2Z" />
+                  <path d="M6 21h12" />
+                </template>
+
+                <template v-else-if="tool.icon === 'pdf-to-jpg'">
+                  <rect x="3" y="3" width="14" height="18" rx="2" />
+                  <path d="M7 8h6" />
+                  <path d="M7 12h6" />
+                  <path d="M18 13h3v8h-8v-3" />
+                  <path d="m13 18 4-4" />
+                </template>
+
+                <template v-else-if="tool.icon === 'pdf-to-png'">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <path d="m21 15-5-5L5 21" />
+                  <path d="M16 4v5" />
+                  <path d="m13.5 6.5 2.5 2.5 2.5-2.5" />
+                </template>
+
+                <template v-else-if="tool.icon === 'sign-pdf'">
+                  <path d="M12 19h9" />
+                  <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L9 17l-4 1 1-4Z" />
+                </template>
+
+                <template v-else-if="tool.icon === 'compress-pdf'">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <path d="M8 8l4 4" />
+                  <path d="M8 11V8h3" />
+                  <path d="M16 16l-4-4" />
+                  <path d="M13 16h3v-3" />
+                </template>
+
+                <template v-else-if="tool.icon === 'crop-pdf'">
+                  <path d="M6 3v12a3 3 0 0 0 3 3h12" />
+                  <path d="M18 21V9a3 3 0 0 0-3-3H3" />
+                </template>
               </svg>
             </div>
 
@@ -255,47 +362,6 @@ const guides = [
             </span>
           </span>
         </NuxtLink>
-
-        <!-- ================================= -->
-        <!-- UPCOMING COMPRESS PDF -->
-        <!-- ================================= -->
-        <div
-          class="flex min-h-[270px] flex-col rounded-[24px] border-2 border-dashed border-slate-200 bg-slate-50 p-7"
-        >
-          <div
-            class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-slate-400"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M12 3v12" />
-              <path d="m7 10 5 5 5-5" />
-              <path d="M5 20h14" />
-            </svg>
-          </div>
-
-          <h3 class="mt-7 text-xl font-extrabold text-slate-600">
-            Compress PDF
-
-            <span class="ml-1 text-xs font-semibold text-slate-400">
-              Coming later
-            </span>
-          </h3>
-
-          <p class="mt-3 text-sm leading-7 text-slate-600">
-            We are checking quality-safe compression methods before releasing
-            this tool.
-          </p>
-        </div>
       </div>
     </section>
 

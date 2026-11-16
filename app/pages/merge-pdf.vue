@@ -38,16 +38,19 @@ const questions = [
 
 <template>
   <main>
+    <!-- HERO -->
     <section
       class="border-b border-[#eef2f7] bg-[linear-gradient(180deg,#f8fbff,#fff)]"
     >
       <div class="site-container pb-11 pt-12 text-center sm:pb-13 sm:pt-17">
         <p class="eyebrow">Free online PDF merger</p>
+
         <h1
           class="mx-auto mt-3 max-w-[760px] text-[clamp(2.3rem,5vw,3.7rem)] font-extrabold leading-[1.12] tracking-[-.055em] text-ink"
         >
           Merge PDF files online
         </h1>
+
         <p
           class="mx-auto mt-4 max-w-[610px] text-[15px] leading-8 text-[#64748b] sm:text-base"
         >
@@ -57,45 +60,72 @@ const questions = [
       </div>
     </section>
 
-    <div class="site-container max-w-[950px] pt-10"><MergeWorkspace /></div>
+    <!-- PDF WORKSPACE -->
+    <div class="site-container max-w-[950px] pt-10">
+      <MergeWorkspace />
+    </div>
 
+    <!-- ADSTERRA RECTANGLE BANNER -->
+    <section
+      class="site-container mx-auto max-w-[950px] pt-8"
+      aria-label="Sponsored content"
+    >
+      <ClientOnly>
+        <AdsterraBanner placement="rectangle" />
+      </ClientOnly>
+    </section>
+
+    <!-- INSTRUCTIONS AND SEO CONTENT -->
     <div class="site-container max-w-[880px] pt-20 sm:pt-24">
       <section class="prose-custom">
         <p class="eyebrow">Step-by-step</p>
+
         <h2>How to merge PDF files</h2>
+
         <ol>
           <li>
-            <strong>Select your PDFs.</strong> Choose at least two documents
-            from your device or drop files into the merge workspace.
+            <strong>Select your PDFs.</strong>
+            Choose at least two documents from your device or drop files into
+            the merge workspace.
           </li>
+
           <li>
-            <strong>Review the order.</strong> Check filenames and page counts.
-            Use drag-and-drop or the move buttons to organize the list.
+            <strong>Review the order.</strong>
+            Check filenames and page counts. Use drag-and-drop or the move
+            buttons to organize the list.
           </li>
+
           <li>
-            <strong>Merge and download.</strong> Click the Merge & download
-            button. Your browser will build one combined file using the filename
-            you choose.
+            <strong>Merge and download.</strong>
+            Click the Merge &amp; download button. Your browser will build one
+            combined file using the filename you choose.
           </li>
+
           <li>
-            <strong>Check your document.</strong> Open the finished PDF to
-            verify its pages before sharing it with others.
+            <strong>Check your document.</strong>
+            Open the finished PDF to verify its pages before sharing it with
+            others.
           </li>
         </ol>
+
         <h2>Why combine PDF documents?</h2>
+
         <p>
           Keeping related documents together makes them easier to send, review,
           and archive. For example, you can combine a report and its appendices,
           class notes from different days, or multiple receipts for your own
           records.
         </p>
+
         <p>
           PDFEasy processes documents in your browser instead of sending the
           files to a document processing server. This offers more control over
           your files, though you should still follow your organization's
           information-security policies and keep your device secure.
         </p>
+
         <h2>Important limitations</h2>
+
         <p>
           This version supports standard unencrypted PDFs. It cannot unlock
           password-protected documents or repair corrupted files. Copying pages
@@ -104,11 +134,14 @@ const questions = [
         </p>
       </section>
 
+      <!-- FAQ -->
       <section class="mt-15">
         <p class="eyebrow">FAQs</p>
+
         <h2 class="mt-3 text-3xl font-extrabold tracking-[-.04em] text-ink">
           Common questions
         </h2>
+
         <div class="mt-6 space-y-3">
           <details
             v-for="item in questions"
@@ -119,34 +152,45 @@ const questions = [
               class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold text-[#0f172a] [&::-webkit-details-marker]:hidden"
             >
               {{ item[0] }}
+
               <span
                 class="text-lg font-normal text-brand transition-transform group-open:rotate-45"
                 aria-hidden="true"
-                >+</span
               >
+                +
+              </span>
             </summary>
+
             <p class="mt-3 max-w-[700px] text-sm leading-7 text-[#64748b]">
               {{ item[1] }}
             </p>
           </details>
         </div>
+
         <p class="mt-7 text-sm leading-7 text-[#64748b]">
           See also our
+
           <NuxtLink
             to="/guides/how-to-merge-pdf"
             class="font-bold text-brand underline underline-offset-3"
-            >complete PDF merging guide</NuxtLink
           >
+            complete PDF merging guide
+          </NuxtLink>
+
           and
+
           <NuxtLink
             to="/guides/is-online-pdf-merging-safe"
             class="font-bold text-brand underline underline-offset-3"
-            >privacy explainer</NuxtLink
+          >
+            privacy explainer </NuxtLink
           >. More help is available in the
+
           <NuxtLink
             to="/guides"
             class="font-bold text-brand underline underline-offset-3"
-            >PDF guides library</NuxtLink
+          >
+            PDF guides library </NuxtLink
           >.
         </p>
       </section>

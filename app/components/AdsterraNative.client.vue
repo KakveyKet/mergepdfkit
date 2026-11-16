@@ -1,18 +1,25 @@
 <script setup>
+import { adsterraNativeConfig } from "~/utils/adsterraNativeConfig.js";
+
+/**
+ * PDFEasy Native Banner
+ *
+ * Keep for future monetization.
+ * No iframe or ad script loads when disabled.
+ */
+
+const adsEnabled = adsterraNativeConfig.enabled === true;
+
 const bannerUrl = "/ads/native-banner.html";
 </script>
 
 <template>
-  <section class="w-full py-6" aria-label="Advertisement">
+  <section v-if="adsEnabled" class="w-full py-6" aria-label="Advertisement">
     <div class="mx-auto w-full max-w-[950px] px-3">
-      <!-- Advertisement label -->
       <p
         class="mb-4 text-center text-[11px] font-semibold uppercase tracking-wider text-slate-400"
-      >
-        Advertisement
-      </p>
+      ></p>
 
-      <!-- Working Native Banner -->
       <iframe
         :src="bannerUrl"
         title="PDFEasy Native Advertisement"

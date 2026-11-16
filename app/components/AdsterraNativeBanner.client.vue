@@ -30,7 +30,7 @@ onBeforeUnmount(() => {
     class="mx-auto my-8 w-full max-w-6xl px-4"
     aria-label="Advertisement"
   >
-    <p class="mb-3 text-center text-xs text-slate-400">Advertisement</p>
+    <p class="mb-3 text-center text-xs text-slate-400"></p>
 
     <div ref="adWrapper">
       <div :id="containerId"></div>

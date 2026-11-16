@@ -279,9 +279,7 @@ onBeforeUnmount(() => {
       <p
         v-if="currentAd"
         class="mb-3 text-center text-[11px] font-semibold uppercase tracking-wider text-slate-400"
-      >
-        Advertisement
-      </p>
+      ></p>
 
       <div
         v-if="currentAd"

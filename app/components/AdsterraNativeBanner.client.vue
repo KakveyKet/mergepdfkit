@@ -32,8 +32,8 @@ onBeforeUnmount(() => {
   >
     <p class="mb-3 text-center text-xs text-slate-400"></p>
 
-    <div ref="adWrapper">
+    <!-- <div ref="adWrapper">
       <div :id="containerId"></div>
-    </div>
+    </div> -->
   </section>
 </template>

@@ -275,7 +275,7 @@ onBeforeUnmount(() => {
 
 <template>
   <section v-if="showSection" class="w-full py-5" aria-label="Advertisement">
-    <div class="mx-auto flex w-full max-w-6xl flex-col items-center px-3">
+    <!-- <div class="mx-auto flex w-full max-w-6xl flex-col items-center px-3">
       <p
         v-if="currentAd"
         class="mb-3 text-center text-[11px] font-semibold uppercase tracking-wider text-slate-400"
@@ -290,15 +290,15 @@ onBeforeUnmount(() => {
         }"
       >
         <div ref="holder"></div>
-      </div>
+      </div> -->
 
-      <!-- Only visible when running npm run dev -->
-      <p
+    <!-- Only visible when running npm run dev -->
+    <!-- <p
         v-if="debug && status"
         class="mt-2 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-center text-xs text-amber-800"
       >
         PDFEasy Ads: {{ status }}
-      </p>
-    </div>
+      </p> -->
+    <!-- </div> -->
   </section>
 </template>

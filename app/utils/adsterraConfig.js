@@ -12,7 +12,7 @@
  */
 
 export const adsterraConfig = {
-  enabled: true,
+  enabled: false,
   desktop: {
     type: "iframe",
     key: "ee49ebed2697ae5a0bf1cc465a5ebc34",

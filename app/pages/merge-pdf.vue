@@ -66,14 +66,12 @@ const questions = [
     </div>
 
     <!-- ADSTERRA RECTANGLE BANNER -->
-    <section
-      class="site-container mx-auto max-w-[950px] pt-8"
-      aria-label="Sponsored content"
-    >
+    <section class="site-container max-w-[950px] pt-8">
       <ClientOnly>
-        <AdsterraBanner placement="rectangle" />
+        <AdsterraNative />
       </ClientOnly>
     </section>
+    >
 
     <!-- INSTRUCTIONS AND SEO CONTENT -->
     <div class="site-container max-w-[880px] pt-20 sm:pt-24">

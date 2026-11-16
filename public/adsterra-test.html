@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>PDFEasy Native Ad Test</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 24px;
+        background: #f8fafc;
+      }
+      .test {
+        border: 2px dashed #93c5fd;
+        border-radius: 12px;
+        background: white;
+        padding: 16px;
+      }
+      #status {
+        margin-top: 16px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>PDFEasy Native Banner Test</h2>
+
+    <div class="test">
+      <p>Advertisement placement</p>
+
+      <script
+        async
+        data-cfasync="false"
+        src="https://bauval.org/21/e6927210cb12a0f211ff6a0040cbc66a"
+        onload="
+          document.getElementById('status').textContent =
+            'Script loaded; ad delivery not yet confirmed'
+        "
+        onerror="
+          document.getElementById('status').textContent =
+            'Script request failed; inspect Network tab'
+        "
+      ></script>
+
+      <div id="container-e6927210cb12a0f211ff6a0040cbc66a"></div>
+    </div>
+
+    <p id="status">Waiting for script response...</p>
+  </body>
+</html>

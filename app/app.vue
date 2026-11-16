@@ -47,19 +47,9 @@ const showTopAd = computed(
 
 <template>
   <div class="min-h-screen flex flex-col">
+    <!-- PDFEasy website header -->
     <SiteHeader />
-
-    <!-- Desktop: 728x90 / Mobile: 320x50 -->
-    <ClientOnly>
-      <AdsterraBanner
-        v-if="showTopAd"
-        :key="`top-${currentPath}`"
-        placement="top"
-      />
-    </ClientOnly>
-
     <NuxtPage class="flex-1" />
-
     <SiteFooter />
   </div>
 </template>
